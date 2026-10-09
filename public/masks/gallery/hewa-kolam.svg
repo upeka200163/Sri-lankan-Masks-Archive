@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <linearGradient id="bgGrad_hewa-kolam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2e1065"/>
+      <stop offset="100%" stop-color="#0f0728"/>
+    </linearGradient>
+    <radialGradient id="spotlight_hewa-kolam" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow_hewa-kolam" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bgGrad_hewa-kolam)"/>
+  <rect width="1000" height="1000" fill="url(#spotlight_hewa-kolam)"/>
+
+  <!-- Museum Exhibit Pedestal & Frame -->
+  <g opacity="0.9">
+    <rect x="380" y="800" width="240" height="150" rx="10" fill="#14110f" stroke="#292524" stroke-width="4"/>
+    <rect x="485" y="680" width="30" height="130" fill="#292524"/>
+    <!-- Plaque -->
+    <rect x="400" y="835" width="200" height="65" rx="6" fill="#271c11" stroke="#d97706" stroke-width="2"/>
+    <text x="500" y="863" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fef3c7" text-anchor="middle">Hewa Kolam</text>
+    <text x="500" y="885" font-family="system-ui, sans-serif" font-size="11" fill="#d97706" text-anchor="middle">Curatorial Archive Record</text>
+  </g>
+
+  <!-- Main Mask Artifact -->
+  <g filter="url(#shadow_hewa-kolam)">
+    <!-- Side Ears / Wings -->
+    
+      <circle cx="280" cy="470" r="35" fill="#fcd34d" stroke="#ca8a04" stroke-width="4"/>
+      <circle cx="720" cy="470" r="35" fill="#fcd34d" stroke="#ca8a04" stroke-width="4"/>
+    
+
+    <!-- Upper Headdress Crest -->
+    
+      <!-- Flamboyant Colonial Soldier Tricorne Hat -->
+      <path d="M300,260 L500,110 L700,260 L500,220 Z" fill="#6b21a8" stroke="#facc15" stroke-width="8"/>
+      <circle cx="500" cy="180" r="18" fill="#facc15" stroke="#ca8a04" stroke-width="4"/>
+      <!-- Feathers -->
+      <path d="M500,110 Q540,40 580,70 Q540,85 500,110 Z" fill="#ec4899"/>
+    
+
+    <!-- Face Oval Structure -->
+    <ellipse cx="500" cy="470" rx="170" ry="220" fill="#fed7aa" stroke="#a855f7" stroke-width="8"/>
+
+    <!-- Eyes -->
+    
+      <ellipse cx="410" cy="410" rx="38" ry="32" fill="#ffffff" stroke="#78350f" stroke-width="5"/>
+      <circle cx="410" cy="410" r="16" fill="#1c1917"/>
+      <ellipse cx="590" cy="410" rx="38" ry="32" fill="#ffffff" stroke="#78350f" stroke-width="5"/>
+      <circle cx="590" cy="410" r="16" fill="#1c1917"/>
+    
+
+    <!-- Nose Ridge -->
+    <path d="M500,420 L480,480 L520,480 Z" fill="none" stroke="#a855f7" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Mouth & Fangs -->
+    
+      <!-- Satirical Huge Soldier Mustache -->
+      <path d="M320,510 Q500,560 500,500 Q500,560 680,510 Q500,600 320,510 Z" fill="#1c1917"/>
+      <path d="M430,570 Q500,600 570,570" fill="none" stroke="#dc2626" stroke-width="6"/>
+    
+  </g>
+</svg>

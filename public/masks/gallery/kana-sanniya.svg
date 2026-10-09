@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <linearGradient id="bgGrad_kana-sanniya" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#292524"/>
+      <stop offset="100%" stop-color="#0c0a09"/>
+    </linearGradient>
+    <radialGradient id="spotlight_kana-sanniya" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#a8a29e" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#a8a29e" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow_kana-sanniya" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bgGrad_kana-sanniya)"/>
+  <rect width="1000" height="1000" fill="url(#spotlight_kana-sanniya)"/>
+
+  <!-- Museum Exhibit Pedestal & Frame -->
+  <g opacity="0.9">
+    <rect x="380" y="800" width="240" height="150" rx="10" fill="#14110f" stroke="#292524" stroke-width="4"/>
+    <rect x="485" y="680" width="30" height="130" fill="#292524"/>
+    <!-- Plaque -->
+    <rect x="400" y="835" width="200" height="65" rx="6" fill="#271c11" stroke="#d97706" stroke-width="2"/>
+    <text x="500" y="863" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fef3c7" text-anchor="middle">Kana Sanniya</text>
+    <text x="500" y="885" font-family="system-ui, sans-serif" font-size="11" fill="#d97706" text-anchor="middle">Curatorial Archive Record</text>
+  </g>
+
+  <!-- Main Mask Artifact -->
+  <g filter="url(#shadow_kana-sanniya)">
+    <!-- Side Ears / Wings -->
+    
+      <ellipse cx="270" cy="450" rx="30" ry="60" fill="#57534e" stroke="#a8a29e" stroke-width="4"/>
+      <ellipse cx="730" cy="450" rx="30" ry="60" fill="#57534e" stroke="#a8a29e" stroke-width="4"/>
+    
+
+    <!-- Upper Headdress Crest -->
+    
+      <!-- Somber Healing Band -->
+      <path d="M340,260 Q500,200 660,260 Z" fill="#44403c" stroke="#a8a29e" stroke-width="6"/>
+    
+
+    <!-- Face Oval Structure -->
+    <ellipse cx="500" cy="470" rx="170" ry="220" fill="#78716c" stroke="#a8a29e" stroke-width="8"/>
+
+    <!-- Eyes -->
+    
+      <!-- Closed / Cataract Serene Blind Eyes -->
+      <path d="M370,420 Q410,390 450,420" fill="none" stroke="#f5f5f4" stroke-width="8" stroke-linecap="round"/>
+      <path d="M550,420 Q590,390 630,420" fill="none" stroke="#f5f5f4" stroke-width="8" stroke-linecap="round"/>
+    
+
+    <!-- Nose Ridge -->
+    <path d="M500,420 L480,480 L520,480 Z" fill="none" stroke="#a8a29e" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Mouth & Fangs -->
+    
+      <path d="M430,540 Q500,520 570,540" fill="none" stroke="#fca5a5" stroke-width="8" stroke-linecap="round"/>
+    
+  </g>
+</svg>

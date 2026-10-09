@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <linearGradient id="bgGrad_ginijal-raksha" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#380d07"/>
+      <stop offset="100%" stop-color="#120302"/>
+    </linearGradient>
+    <radialGradient id="spotlight_ginijal-raksha" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#ef4444" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow_ginijal-raksha" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bgGrad_ginijal-raksha)"/>
+  <rect width="1000" height="1000" fill="url(#spotlight_ginijal-raksha)"/>
+
+  <!-- Museum Exhibit Pedestal & Frame -->
+  <g opacity="0.9">
+    <rect x="380" y="800" width="240" height="150" rx="10" fill="#14110f" stroke="#292524" stroke-width="4"/>
+    <rect x="485" y="680" width="30" height="130" fill="#292524"/>
+    <!-- Plaque -->
+    <rect x="400" y="835" width="200" height="65" rx="6" fill="#271c11" stroke="#d97706" stroke-width="2"/>
+    <text x="500" y="863" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fef3c7" text-anchor="middle">Ginijal Raksha</text>
+    <text x="500" y="885" font-family="system-ui, sans-serif" font-size="11" fill="#d97706" text-anchor="middle">Curatorial Archive Record</text>
+  </g>
+
+  <!-- Main Mask Artifact -->
+  <g filter="url(#shadow_ginijal-raksha)">
+    <!-- Side Ears / Wings -->
+    
+      <!-- Flaming Wing Ears -->
+      <path d="M300,440 C160,340 180,550 300,560 C200,500 240,400 300,440 Z" fill="#ea580c" stroke="#facc15" stroke-width="6"/>
+      <path d="M700,440 C840,340 820,550 700,560 C800,500 760,400 700,440 Z" fill="#ea580c" stroke="#facc15" stroke-width="6"/>
+    
+
+    <!-- Upper Headdress Crest -->
+    
+      <!-- Blazing Crown of Fire -->
+      <path d="M500,50 Q460,180 500,240 Q540,180 500,50 Z" fill="#f59e0b" stroke="#ef4444" stroke-width="6"/>
+      <path d="M430,90 Q400,190 470,250 Q410,180 430,90 Z" fill="#ea580c" stroke="#facc15" stroke-width="5"/>
+      <path d="M570,90 Q600,190 530,250 Q590,180 570,90 Z" fill="#ea580c" stroke="#facc15" stroke-width="5"/>
+      <path d="M370,140 Q350,210 440,260 Q360,200 370,140 Z" fill="#dc2626"/>
+      <path d="M630,140 Q650,210 560,260 Q640,200 630,140 Z" fill="#dc2626"/>
+    
+
+    <!-- Face Oval Structure -->
+    <ellipse cx="500" cy="470" rx="170" ry="220" fill="#dc2626" stroke="#ef4444" stroke-width="8"/>
+
+    <!-- Eyes -->
+    
+      <ellipse cx="400" cy="430" rx="50" ry="48" fill="#fef08a" stroke="#b91c1c" stroke-width="8"/>
+      <circle cx="400" cy="430" r="25" fill="#450a0a"/>
+      <circle cx="410" cy="420" r="7" fill="#ffffff"/>
+      <ellipse cx="600" cy="430" rx="50" ry="48" fill="#fef08a" stroke="#b91c1c" stroke-width="8"/>
+      <circle cx="600" cy="430" r="25" fill="#450a0a"/>
+      <circle cx="610" cy="420" r="7" fill="#ffffff"/>
+    
+
+    <!-- Nose Ridge -->
+    <path d="M500,420 L480,480 L520,480 Z" fill="none" stroke="#ef4444" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Mouth & Fangs -->
+    
+      <path d="M360,540 Q500,640 640,540 Q500,510 360,540 Z" fill="#450a0a" stroke="#f97316" stroke-width="6"/>
+      <polygon points="380,540 410,540 395,620" fill="#ffffff"/>
+      <polygon points="590,540 620,540 605,620" fill="#ffffff"/>
+    
+  </g>
+</svg>

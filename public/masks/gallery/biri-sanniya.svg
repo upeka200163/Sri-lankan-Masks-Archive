@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <linearGradient id="bgGrad_biri-sanniya" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0c4a6e"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </linearGradient>
+    <radialGradient id="spotlight_biri-sanniya" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow_biri-sanniya" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="25" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="1000" fill="url(#bgGrad_biri-sanniya)"/>
+  <rect width="1000" height="1000" fill="url(#spotlight_biri-sanniya)"/>
+
+  <!-- Museum Exhibit Pedestal & Frame -->
+  <g opacity="0.9">
+    <rect x="380" y="800" width="240" height="150" rx="10" fill="#14110f" stroke="#292524" stroke-width="4"/>
+    <rect x="485" y="680" width="30" height="130" fill="#292524"/>
+    <!-- Plaque -->
+    <rect x="400" y="835" width="200" height="65" rx="6" fill="#271c11" stroke="#d97706" stroke-width="2"/>
+    <text x="500" y="863" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fef3c7" text-anchor="middle">Biri Sanniya</text>
+    <text x="500" y="885" font-family="system-ui, sans-serif" font-size="11" fill="#d97706" text-anchor="middle">Curatorial Archive Record</text>
+  </g>
+
+  <!-- Main Mask Artifact -->
+  <g filter="url(#shadow_biri-sanniya)">
+    <!-- Side Ears / Wings -->
+    
+      <!-- Serpent Coiled into Ear Cavity -->
+      <path d="M230,400 C180,480 300,540 250,580" fill="none" stroke="#38bdf8" stroke-width="16" stroke-linecap="round"/>
+      <circle cx="230" cy="400" r="14" fill="#e0f2fe"/>
+      <path d="M770,400 C820,480 700,540 750,580" fill="none" stroke="#38bdf8" stroke-width="16" stroke-linecap="round"/>
+      <circle cx="770" cy="400" r="14" fill="#e0f2fe"/>
+    
+
+    <!-- Upper Headdress Crest -->
+    
+      <path d="M360,250 Q500,160 640,250 Z" fill="#0369a1" stroke="#38bdf8" stroke-width="6"/>
+    
+
+    <!-- Face Oval Structure -->
+    <ellipse cx="500" cy="470" rx="170" ry="220" fill="#64748b" stroke="#38bdf8" stroke-width="8"/>
+
+    <!-- Eyes -->
+    
+      <ellipse cx="410" cy="410" rx="42" ry="34" fill="#f8fafc" stroke="#0284c7" stroke-width="5"/>
+      <circle cx="410" cy="410" r="18" fill="#0f172a"/>
+      <ellipse cx="590" cy="410" rx="42" ry="34" fill="#f8fafc" stroke="#0284c7" stroke-width="5"/>
+      <circle cx="590" cy="410" r="18" fill="#0f172a"/>
+    
+
+    <!-- Nose Ridge -->
+    <path d="M500,420 L480,480 L520,480 Z" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linejoin="round"/>
+
+    <!-- Mouth & Fangs -->
+    
+      <!-- Asymmetrical Confused Grin -->
+      <path d="M410,540 Q480,510 590,550" fill="none" stroke="#f43f5e" stroke-width="8" stroke-linecap="round"/>
+    
+  </g>
+</svg>
