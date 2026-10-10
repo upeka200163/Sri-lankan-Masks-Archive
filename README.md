@@ -37,7 +37,7 @@ An interactive, culturally authentic digital archive and educational web applica
 - Engaging personality matching questionnaire mapping user traits to traditional Sri Lankan mask archetypes.
 - Step-by-step progress, folklore feedback, and immediate archetype reveal.
 
-### 🪵 5. Crafting History & Master Woodcarvers (`CraftingHistoryPage.jsx`)
+### 🛠️ 5. Crafting History & Master Woodcarvers (`CraftingHistoryPage.jsx`)
 - **Seven Stages of Mask Carving (`SevenStages.jsx`):** Detailed breakdown from harvesting Kaduru wood (*වෙල් කදුරු*), smoke seasoning, hand-chiseling, and organic pigmentation.
 - **Traditional Tools & Organic Pigments (`ToolsMaterials.jsx`):** Documentation on plant resins, clays, and handmade chisels (*Katu*).
 - **Master Artisan Profiles (`ArtistHighlight.jsx`):** Honoring the legacy of traditional Southern coastal carvers (Ambalangoda lineage).
