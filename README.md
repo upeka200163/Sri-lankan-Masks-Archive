@@ -5,12 +5,13 @@
 [![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Responsive](https://img.shields.io/badge/Responsive-Mobile--First-success?style=for-the-badge&logo=google-chrome&logoColor=white)](https://srilankamasks.netlify.app/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > **Live Deployment:** 🌐 [https://srilankamasks.netlify.app/](https://srilankamasks.netlify.app/)  
 > **Source Repository:** 🐙 [GitHub Repository](https://github.com/upeka200163/Sri-lankan-Masks-Archive.git)
 
-An interactive, culturally authentic digital archive and educational web application dedicated to preserving and showcasing Sri Lanka’s ancient ritual mask heritage (**Raksha**, **Kolam**, and **Sanni**). Combining historical documentation, high-fidelity 3D/visual inspections, interactive folklore quizzes, and step-by-step woodcrafting archives with a traditional dark-gold Sri Lankan aesthetic.
+An interactive, culturally authentic digital archive and educational web application dedicated to preserving and showcasing Sri Lanka’s ancient ritual mask heritage (**Raksha**, **Kolam**, and **Sanni**). Engineered with a mobile-first, fully responsive design, the platform seamlessly adapts across handheld smartphones, tablets, and desktop displays, combining historical documentation, high-fidelity 3D/visual inspections, interactive folklore quizzes, and step-by-step woodcrafting archives with a traditional dark-gold Sri Lankan aesthetic.
 
 ---
 
@@ -44,6 +45,11 @@ An interactive, culturally authentic digital archive and educational web applica
 
 ### 🎬 6. Ritual Performances & Video Media (`PerformancesPage.jsx`, `VideoShowcase.jsx`)
 - Video documentation and photo archives of *Thovil* (exorcism healing ceremonies) and *Kolam Maduwa* folk theater.
+
+### 📱 7. Full Mobile Responsiveness & Multi-Device Optimization
+- **Mobile-First Layout:** Fully optimized across screen widths from small mobile phones (320px+) to high-resolution desktop screens.
+- **Adaptive Touch Controls:** Sized tap targets, swipe-friendly interactions, and mobile navigation support.
+- **Responsive Media & Grids:** Adaptive card grids (`MaskGrid.jsx`), responsive media modals (`LookCloser.jsx`, `VideoShowcase.jsx`), and horizontally scrollable tables (`TypesTable.jsx`) prevent overflow and ensure smooth handheld browsing.
 
 ---
 
