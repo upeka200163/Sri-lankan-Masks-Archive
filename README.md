@@ -139,7 +139,7 @@ masks-of-srilanka/
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 💻 Tech Stack & Architecture
 
 - **Frontend Framework:** [React 18](https://reactjs.org/) (Hooks, dynamic props, state management)
 - **Build Tool:** [Vite 5](https://vitejs.dev/) (Rapid HMR and optimized production bundling)
