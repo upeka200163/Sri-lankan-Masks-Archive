@@ -1,3 +1,5 @@
+import { galleryArtifactsData } from "./galleryArtifactsData";
+
 export const masksData = [
   {
     id: "naga-raksha",
@@ -481,3 +483,6 @@ export const masksData = [
     ]
   }
 ];
+
+// Unified master catalog across all collections
+export const allMasksData = [...masksData, ...galleryArtifactsData];

@@ -64,7 +64,6 @@ export default function GalleryPage() {
                 className="group bg-stone-900/50 backdrop-blur-sm border border-stone-800/90 rounded-3xl p-6 hover:border-amber-600/40 transition-all duration-300 flex flex-col justify-between hover:shadow-2xl hover:shadow-amber-950/20"
               >
                 <div>
-                  {/* දැන් මෙතැනින් mask.image හරහා නිවැරදි රූපය දිස්වේ */}
                   <div className="relative h-64 bg-stone-950 rounded-2xl overflow-hidden mb-5 border border-stone-800/80 flex items-center justify-center p-3">
                     {mask.image ? (
                       <img

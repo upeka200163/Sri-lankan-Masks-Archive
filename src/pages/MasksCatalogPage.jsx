@@ -1,41 +1,94 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { masksData } from "../data/masksData";
-import MaskCard from "../components/masks/MaskCard";
+import MaskGrid from "../components/masks/MaskGrid";
 import MaskFilter from "../components/masks/MaskFilter";
 import TypesTable from "../components/masks/TypesTable";
+import { filterMasks } from "../components/common/SearchBar";
+import { Sparkles, RotateCcw } from "lucide-react";
 
 export default function MasksCatalogPage() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filteredMasks = selectedCategory === "All"
+  const urlSearch = searchParams.get("search") || searchParams.get("q") || "";
+  const [searchQuery, setSearchQuery] = useState(urlSearch);
+
+  useEffect(() => {
+    setSearchQuery(urlSearch);
+  }, [urlSearch]);
+
+  // Filter masksData by category
+  const categoryFilteredMasks = selectedCategory === "All"
     ? masksData
     : masksData.filter((mask) => mask.category === selectedCategory);
 
+  // Apply multi-field matching search filter
+  const filteredMasks = filterMasks(categoryFilteredMasks, searchQuery);
+
+  const handleResetFilters = () => {
+    setSelectedCategory("All");
+    setSearchQuery("");
+    setSearchParams({});
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
-      <div className="text-center max-w-3xl mx-auto mb-10">
-        <span className="text-xs uppercase tracking-widest text-amber-500 font-semibold">
-          Cultural Archive
+      {/* Header */}
+      <div className="text-center max-w-3xl mx-auto mb-10 space-y-4">
+        <span className="inline-flex items-center gap-1.5 text-xs uppercase tracking-widest text-amber-500 font-semibold px-3.5 py-1 bg-amber-950/40 border border-amber-600/30 rounded-full">
+          <Sparkles className="w-3.5 h-3.5" /> Cultural Archive
         </span>
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-stone-100 mt-2">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-stone-100 tracking-tight">
           TRADITIONAL MASKS CATALOG
         </h1>
-        <p className="text-stone-400 text-sm md:text-base mt-3">
+        <p className="text-stone-400 text-sm md:text-base leading-relaxed">
           Explore the rich variety of Sri Lankan masks categorized by ritual families, protective roles, and theatrical satire.
         </p>
 
+        {/* Category Filter Pills */}
         <MaskFilter
           selectedCategory={selectedCategory}
           onSelectCategory={setSelectedCategory}
         />
       </div>
 
-      {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredMasks.map((mask) => (
-          <MaskCard key={mask.id} mask={mask} />
-        ))}
-      </div>
+      {/* Filter / Search Status Feedback */}
+      {(searchQuery.trim() || selectedCategory !== "All") && (
+        <div className="flex items-center justify-between bg-stone-900/60 border border-stone-800/80 rounded-2xl px-5 py-3 mb-8 text-xs text-stone-400">
+          <div className="flex items-center gap-2">
+            <span>
+              Showing <strong className="text-amber-400 font-semibold">{filteredMasks.length}</strong> of{" "}
+              <strong className="text-stone-300">{masksData.length}</strong> masks
+              {searchQuery.trim() && (
+                <>
+                  {" "}matching &ldquo;<span className="text-stone-100 font-medium">{searchQuery}</span>&rdquo;
+                </>
+              )}
+              {selectedCategory !== "All" && (
+                <>
+                  {" "}in <span className="text-amber-400 font-medium">{selectedCategory}</span>
+                </>
+              )}
+            </span>
+          </div>
+
+          <button
+            onClick={handleResetFilters}
+            className="inline-flex items-center gap-1 text-amber-400 hover:text-amber-300 transition-colors font-medium cursor-pointer"
+          >
+            <RotateCcw className="w-3 h-3" /> Reset filters
+          </button>
+        </div>
+      )}
+
+      {/* Mask Grid with Responsive Columns & Authentic Empty State */}
+      <MaskGrid
+        masks={filteredMasks}
+        searchQuery={searchQuery}
+        selectedCategory={selectedCategory}
+        onResetFilters={handleResetFilters}
+      />
 
       {/* Types Comparison Section */}
       <div className="mt-20">

@@ -44,12 +44,19 @@ export default function MaskCard({ mask }) {
         </div>
       </div>
 
+      {/* Polished & Refined Action Button */}
       <div className="p-5 pt-0">
         <Link
           to={`/masks/${mask.id}`}
-          className="w-full py-2.5 bg-stone-950 hover:bg-amber-600 text-stone-300 hover:text-stone-950 border border-stone-800 hover:border-transparent rounded-xl font-bold text-xs flex items-center justify-center gap-2 transition-all duration-200"
+          className="relative w-full py-3 px-4 rounded-xl bg-stone-950/90 hover:bg-linear-to-r hover:from-amber-600 hover:via-amber-500 hover:to-amber-600 border border-amber-600/30 hover:border-amber-400 text-amber-300 hover:text-stone-950 font-bold text-xs sm:text-sm tracking-wide transition-all duration-300 flex items-center justify-between shadow-md hover:shadow-xl hover:shadow-amber-950/50 hover:scale-[1.02] active:scale-[0.99] group/btn"
         >
-          සම්පූර්ණ විස්තරය බලන්න (View 3D Record) <ArrowRight className="w-3.5 h-3.5" />
+          <span className="flex items-center gap-2">
+            <Sparkles className="w-3.5 h-3.5 text-amber-400 group-hover/btn:text-stone-950 transition-colors" />
+            <span>Explore 3D Record</span>
+          </span>
+          <span className="w-6 h-6 rounded-lg bg-amber-500/15 group-hover/btn:bg-stone-950/20 flex items-center justify-center transition-colors">
+            <ArrowRight className="w-3.5 h-3.5 text-amber-400 group-hover/btn:text-stone-950 group-hover/btn:translate-x-0.5 transition-all" />
+          </span>
         </Link>
       </div>
     </div>
