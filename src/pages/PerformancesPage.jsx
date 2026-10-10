@@ -167,51 +167,51 @@ export default function PerformancesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0e0c0a] text-stone-100 py-16 sm:py-20 selection:bg-amber-600 selection:text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 sm:space-y-24">
+    <div className="min-h-screen bg-[#0e0c0a] text-stone-100 py-10 sm:py-20 selection:bg-amber-600 selection:text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 sm:space-y-24">
 
         {/* 1. Page Header & Mandatory Documentary Hero Showcase */}
-        <section className="text-center max-w-4xl mx-auto space-y-6">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-950/60 border border-amber-600/40">
-            <Flame className="w-3.5 h-3.5 text-amber-400" /> Living Rituals & Sacred Folk Theatres
+        <section className="text-center max-w-4xl mx-auto space-y-5 sm:space-y-6">
+          <span className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-widest text-amber-400 bg-amber-950/60 border border-amber-600/40">
+            <Flame className="w-3.5 h-3.5 text-amber-400" /> Living Rituals & Folk Theatres
           </span>
 
-          <h1 className="text-4xl sm:text-6xl font-extrabold text-stone-100 tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-100 tracking-tight leading-tight">
             TRADITIONAL PERFORMANCES & <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 via-amber-500 to-red-500">
               RITUAL DANCES OF SRI LANKA
             </span>
           </h1>
 
-          <p className="text-stone-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="text-stone-300 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Discover the dramatic choreography, sacred chants, and polyrhythmic percussion powering Sri Lanka’s <span className="text-amber-400 font-semibold">Low-Country (Pahatharata)</span> masked traditions.
           </p>
 
           {/* Documentary Showcase Banner: 'Sanni Yakuma & Nocturnal Tovil' */}
-          <div className="relative rounded-3xl overflow-hidden border border-stone-800 shadow-2xl mt-10 group">
-            <div className="aspect-16/9 sm:aspect-21/9 w-full max-h-[480px] bg-stone-950">
+          <div className="relative rounded-3xl overflow-hidden border border-stone-800 shadow-2xl mt-6 sm:mt-10 group">
+            <div className="aspect-4/3 sm:aspect-16/9 md:aspect-21/9 w-full max-h-[480px] bg-stone-950">
               <img
                 src="/images/sanni-exorcism-dance.jpg"
                 alt="Sanni Yakuma & Nocturnal Tovil Exorcism Fire Dance in Southern Sri Lanka"
                 className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-700"
               />
             </div>
-            <div className="absolute inset-0 bg-linear-to-t from-stone-950 via-stone-950/40 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-t from-stone-950 via-stone-950/50 to-transparent pointer-events-none" />
 
-            <div className="absolute bottom-6 inset-x-6 sm:inset-x-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 text-left">
+            <div className="absolute bottom-4 sm:bottom-6 inset-x-4 sm:inset-x-8 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-3 text-left bg-stone-950/70 sm:bg-transparent backdrop-blur-xs sm:backdrop-blur-none p-3 sm:p-0 rounded-2xl sm:rounded-none border border-stone-800/60 sm:border-none">
               <div className="space-y-1 max-w-2xl">
-                <span className="inline-block px-3 py-1 rounded-full bg-amber-600 text-stone-950 text-[11px] font-bold uppercase tracking-wider">
+                <span className="inline-block px-2.5 py-0.5 rounded-full bg-amber-600 text-stone-950 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider">
                   Nocturnal Shanthikarma
                 </span>
-                <h2 className="text-xl sm:text-2xl font-bold text-stone-100 mt-1">
+                <h2 className="text-lg sm:text-2xl font-bold text-stone-100 mt-0.5 sm:mt-1">
                   Sanni Yakuma & Nocturnal Tovil
                 </h2>
-                <p className="text-xs text-stone-300">
+                <p className="text-xs text-stone-300 line-clamp-2 sm:line-clamp-none">
                   Documenting all-night fire-lit exorcisms, Yak Bera drumming, and masked disease demon dances in Southern Sri Lanka.
                 </p>
               </div>
 
-              <span className="text-[11px] font-mono text-amber-400 bg-stone-950/80 px-3 py-1.5 rounded-xl border border-stone-800 shrink-0">
+              <span className="text-[10px] sm:text-[11px] font-mono text-amber-400 bg-stone-950/80 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl border border-stone-800 shrink-0 self-start sm:self-auto">
                 Ambalangoda Ritual Archive
               </span>
             </div>

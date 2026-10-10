@@ -203,12 +203,12 @@ export default function Footer() {
                     placeholder="Enter your email address..."
                     required
                     disabled={status === "submitting"}
-                    className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-2.5 text-xs text-stone-200 placeholder-stone-500 focus:outline-hidden focus:border-amber-500 transition-colors disabled:opacity-50"
+                    className="w-full bg-stone-950 border border-stone-800 rounded-xl px-4 py-3 text-base sm:text-xs text-stone-200 placeholder-stone-500 focus:outline-hidden focus:border-amber-500 transition-colors disabled:opacity-50 pr-24"
                   />
                   <button
                     type="submit"
                     disabled={status === "submitting"}
-                    className="absolute right-1.5 top-1.5 px-3.5 py-1.5 bg-amber-600 hover:bg-amber-500 active:scale-95 text-stone-950 font-bold rounded-lg text-xs flex items-center gap-1.5 transition-all cursor-pointer shadow disabled:opacity-50"
+                    className="absolute right-1.5 top-1.5 bottom-1.5 px-3.5 bg-amber-600 hover:bg-amber-500 active:scale-95 text-stone-950 font-bold rounded-lg text-xs flex items-center gap-1.5 transition-all cursor-pointer shadow disabled:opacity-50"
                   >
                     {status === "submitting" ? (
                       <>
@@ -245,7 +245,7 @@ export default function Footer() {
 
         {/* 5. Sub-Footer Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-400">
-          <div className="flex items-center gap-2 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
             <span>© {new Date().getFullYear()} Masks of Sri Lanka. All Rights Reserved.</span>
             <span className="hidden sm:inline text-stone-400">•</span>
             <span className="text-amber-500/90 flex items-center gap-1">
@@ -259,7 +259,7 @@ export default function Footer() {
             </span>
             <button
               onClick={scrollToTop}
-              className="px-4 py-2 rounded-xl bg-stone-900/90 hover:bg-amber-600 text-stone-300 hover:text-stone-950 border border-stone-800 hover:border-amber-500 font-bold text-xs flex items-center gap-1.5 transition-all duration-200 cursor-pointer shadow-lg"
+              className="px-4 py-2.5 rounded-xl bg-stone-900/90 hover:bg-amber-600 text-stone-300 hover:text-stone-950 border border-stone-800 hover:border-amber-500 font-bold text-xs flex items-center gap-1.5 transition-all duration-200 cursor-pointer shadow-lg min-h-[44px]"
               title="Scroll back to top of page"
             >
               <span>Back to Top</span>

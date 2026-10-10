@@ -163,21 +163,21 @@ export default function VideoShowcase() {
 
       {/* Video Modal Screen */}
       {activeVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md animate-in fade-in duration-200">
-          <div className="relative w-full max-w-4xl bg-stone-950 border border-stone-800 rounded-3xl overflow-hidden shadow-2xl">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-md animate-in fade-in duration-200">
+          <div className="relative w-full max-w-4xl bg-stone-950 border border-stone-800 rounded-3xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col">
             {/* Modal Header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-stone-800 bg-stone-900/40">
-              <div>
-                <span className="text-[11px] font-mono text-amber-400 uppercase tracking-widest block">
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3.5 sm:py-4 border-b border-stone-800 bg-stone-900/40 shrink-0">
+              <div className="min-w-0 pr-2">
+                <span className="text-[10px] sm:text-[11px] font-mono text-amber-400 uppercase tracking-widest block truncate">
                   {activeVideo.category} • {activeVideo.origin}
                 </span>
-                <h3 className="text-base sm:text-lg font-bold text-stone-100">
+                <h3 className="text-sm sm:text-lg font-bold text-stone-100 truncate">
                   {activeVideo.title}
                 </h3>
               </div>
               <button
                 onClick={() => setActiveVideo(null)}
-                className="p-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-stone-400 hover:text-stone-100 transition-colors border border-stone-800 cursor-pointer"
+                className="p-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-stone-400 hover:text-stone-100 transition-colors border border-stone-800 cursor-pointer shrink-0 min-h-[40px] min-w-[40px] flex items-center justify-center"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
@@ -191,18 +191,18 @@ export default function VideoShowcase() {
                 alt={activeVideo.title}
                 className="w-full h-full object-cover opacity-60 filter blur-xs"
               />
-              <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center p-6 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-amber-500 text-stone-950 flex items-center justify-center shadow-2xl animate-pulse">
-                  <Play className="w-8 h-8 fill-stone-950 ml-1" />
+              <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center p-4 sm:p-6 text-center space-y-3 sm:space-y-4">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-amber-500 text-stone-950 flex items-center justify-center shadow-2xl animate-pulse">
+                  <Play className="w-6 h-6 sm:w-8 sm:h-8 fill-stone-950 ml-0.5" />
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-widest text-amber-400 font-mono font-bold block mb-1">
+                  <span className="text-[10px] sm:text-xs uppercase tracking-widest text-amber-400 font-mono font-bold block mb-1">
                     Archival Footage Recording
                   </span>
-                  <h4 className="text-xl sm:text-2xl font-extrabold text-stone-100">
+                  <h4 className="text-base sm:text-2xl font-extrabold text-stone-100 line-clamp-2">
                     {activeVideo.title}
                   </h4>
-                  <p className="text-sm text-stone-300 max-w-md mx-auto mt-2">
+                  <p className="text-xs sm:text-sm text-stone-300 max-w-md mx-auto mt-1 sm:mt-2 line-clamp-3">
                     {activeVideo.description}
                   </p>
                 </div>
@@ -210,19 +210,19 @@ export default function VideoShowcase() {
             </div>
 
             {/* Modal Bottom Detail */}
-            <div className="p-6 bg-stone-900/60 border-t border-stone-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div className="space-y-1">
-                <span className="text-[11px] font-mono text-amber-400 font-bold block">
+            <div className="p-4 sm:p-6 bg-stone-900/60 border-t border-stone-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4 shrink-0 overflow-y-auto">
+              <div className="space-y-0.5 sm:space-y-1">
+                <span className="text-[10px] sm:text-[11px] font-mono text-amber-400 font-bold block">
                   {activeVideo.sinhalaTitle}
                 </span>
-                <p className="text-xs text-stone-400">
+                <p className="text-[11px] sm:text-xs text-stone-400">
                   Recorded in collaboration with Ambalangoda Master Carver Guild & Traditional Dancers.
                 </p>
               </div>
 
               <button
                 onClick={() => setActiveVideo(null)}
-                className="px-5 py-2 bg-stone-800 hover:bg-stone-700 text-stone-200 font-bold rounded-xl text-xs transition-all shrink-0 cursor-pointer"
+                className="w-full sm:w-auto px-5 py-2.5 bg-stone-800 hover:bg-stone-700 text-stone-200 font-bold rounded-xl text-xs transition-all shrink-0 cursor-pointer min-h-[40px]"
               >
                 Close Archival Viewer
               </button>

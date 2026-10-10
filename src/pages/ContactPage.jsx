@@ -61,31 +61,31 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto px-4 py-10 sm:py-16 sm:px-6 lg:px-8">
       {/* Top Header */}
-      <div className="text-center max-w-3xl mx-auto mb-16">
-        <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-amber-400 bg-amber-950/40 border border-amber-600/30 mb-4">
+      <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
+        <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-amber-400 bg-amber-950/40 border border-amber-600/30 mb-3 sm:mb-4">
           <Sparkles className="w-3.5 h-3.5" /> Cultural Liaison & Archives
         </span>
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-stone-100 tracking-tight">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-stone-100 tracking-tight">
           CONNECT WITH THE <br />
           <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 via-amber-500 to-red-500">
             HERITAGE ARCHIVE
           </span>
         </h1>
-        <p className="text-stone-400 text-sm md:text-base mt-4 leading-relaxed">
+        <p className="text-stone-400 text-xs sm:text-sm md:text-base mt-3 sm:mt-4 leading-relaxed max-w-xl mx-auto">
           Inquire about artisan carving residencies, academic research on coastal ritual dramas, or consult our archive curatorial team.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
         {/* Contact Form Section */}
-        <div className="lg:col-span-7 bg-stone-900/60 backdrop-blur-md border border-stone-800/80 rounded-3xl p-8 sm:p-10 shadow-2xl relative overflow-hidden">
+        <div className="lg:col-span-7 bg-stone-900/60 backdrop-blur-md border border-stone-800/80 rounded-3xl p-5 sm:p-8 lg:p-10 shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-amber-600/5 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="flex items-center justify-between border-b border-stone-800 pb-5 mb-8">
+          <div className="flex items-center justify-between border-b border-stone-800 pb-4 sm:pb-5 mb-6 sm:mb-8">
             <div>
-              <h2 className="text-2xl font-bold text-stone-100">Send an Inquiry</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-stone-100">Send an Inquiry</h2>
               <p className="text-stone-400 text-xs mt-1">Direct communication with our traditional conservation desk.</p>
             </div>
             <div className="hidden sm:flex items-center gap-1.5 text-xs text-amber-500 font-mono bg-amber-950/40 px-3 py-1.5 rounded-lg border border-amber-800/30">
@@ -94,12 +94,12 @@ export default function ContactPage() {
           </div>
 
           {submitted ? (
-            <div className="py-16 text-center bg-stone-950/60 border border-amber-500/30 rounded-2xl flex flex-col items-center">
-              <div className="w-16 h-16 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mb-4 text-amber-400">
-                <CheckCircle2 className="w-8 h-8" />
+            <div className="py-12 sm:py-16 text-center bg-stone-950/60 border border-amber-500/30 rounded-2xl flex flex-col items-center px-4">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-amber-500/10 border border-amber-500/30 flex items-center justify-center mb-4 text-amber-400">
+                <CheckCircle2 className="w-7 h-7 sm:w-8 sm:h-8" />
               </div>
-              <h3 className="text-2xl font-bold text-stone-100">Dispatch Received</h3>
-              <p className="text-stone-400 text-sm mt-2 max-w-sm leading-relaxed">
+              <h3 className="text-xl sm:text-2xl font-bold text-stone-100">Dispatch Received</h3>
+              <p className="text-stone-400 text-xs sm:text-sm mt-2 max-w-sm leading-relaxed">
                 Thank you, <span className="text-amber-400 font-semibold">{formData.name}</span>. Your inquiry has been routed to the archival curators. We typically reply within 24 to 48 hours.
               </p>
               <button
@@ -107,16 +107,16 @@ export default function ContactPage() {
                   setSubmitted(false);
                   setFormData({ name: "", email: "", inquiryType: "General Inquiry", subject: "", message: "" });
                 }}
-                className="mt-8 px-6 py-2.5 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-semibold rounded-xl transition-all"
+                className="mt-6 sm:mt-8 px-6 py-2.5 bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-semibold rounded-xl transition-all cursor-pointer"
               >
                 Send Another Dispatch
               </button>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
-                  <label className="block text-xs font-semibold text-stone-300 mb-2 uppercase tracking-wider">
+                  <label className="block text-xs font-semibold text-stone-300 mb-1.5 sm:mb-2 uppercase tracking-wider">
                     Full Name
                   </label>
                   <input
@@ -126,11 +126,11 @@ export default function ContactPage() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Elena Rostova"
-                    className="w-full bg-stone-950/80 border border-stone-800 rounded-xl px-4 py-3 text-sm text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors"
+                    className="w-full bg-stone-950/80 border border-stone-800 rounded-xl px-4 py-3 text-base sm:text-sm text-stone-200 placeholder-stone-600 focus:outline-hidden focus:border-amber-500 transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-stone-300 mb-2 uppercase tracking-wider">
+                  <label className="block text-xs font-semibold text-stone-300 mb-1.5 sm:mb-2 uppercase tracking-wider">
                     Email Address
                   </label>
                   <input
@@ -140,21 +140,21 @@ export default function ContactPage() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="e.g. elena@curator.org"
-                    className="w-full bg-stone-950/80 border border-stone-800 rounded-xl px-4 py-3 text-sm text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors"
+                    className="w-full bg-stone-950/80 border border-stone-800 rounded-xl px-4 py-3 text-base sm:text-sm text-stone-200 placeholder-stone-600 focus:outline-hidden focus:border-amber-500 transition-colors"
                   />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
-                  <label className="block text-xs font-semibold text-stone-300 mb-2 uppercase tracking-wider">
+                  <label className="block text-xs font-semibold text-stone-300 mb-1.5 sm:mb-2 uppercase tracking-wider">
                     Inquiry Nature
                   </label>
                   <select
                     name="inquiryType"
                     value={formData.inquiryType}
                     onChange={handleChange}
-                    className="w-full bg-stone-950/80 border border-stone-800 rounded-xl px-4 py-3 text-sm text-stone-200 focus:outline-none focus:border-amber-500 transition-colors cursor-pointer"
+                    className="w-full bg-stone-950/80 border border-stone-800 rounded-xl px-4 py-3 text-base sm:text-sm text-stone-200 focus:outline-hidden focus:border-amber-500 transition-colors cursor-pointer"
                   >
                     <option value="General Inquiry">General Curatorial Inquiry</option>
                     <option value="Academic Research">Academic & Ethno-Historical Research</option>
@@ -163,7 +163,7 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-stone-300 mb-2 uppercase tracking-wider">
+                  <label className="block text-xs font-semibold text-stone-300 mb-1.5 sm:mb-2 uppercase tracking-wider">
                     Subject Heading
                   </label>
                   <input
@@ -173,36 +173,36 @@ export default function ContactPage() {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="e.g. Sanni Ritual Pigments Question"
-                    className="w-full bg-stone-950/80 border border-stone-800 rounded-xl px-4 py-3 text-sm text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors"
+                    className="w-full bg-stone-950/80 border border-stone-800 rounded-xl px-4 py-3 text-base sm:text-sm text-stone-200 placeholder-stone-600 focus:outline-hidden focus:border-amber-500 transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-stone-300 mb-2 uppercase tracking-wider">
+                <label className="block text-xs font-semibold text-stone-300 mb-1.5 sm:mb-2 uppercase tracking-wider">
                   Detailed Inquiry Message
                 </label>
                 <textarea
                   name="message"
                   required
-                  rows={5}
+                  rows={4}
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Outline your inquiry regarding the carving stages, historical lineages, or ceremonial dance repertoire..."
-                  className="w-full bg-stone-950/80 border border-stone-800 rounded-xl px-4 py-3 text-sm text-stone-200 placeholder-stone-600 focus:outline-none focus:border-amber-500 transition-colors resize-none"
+                  className="w-full bg-stone-950/80 border border-stone-800 rounded-xl px-4 py-3 text-base sm:text-sm text-stone-200 placeholder-stone-600 focus:outline-hidden focus:border-amber-500 transition-colors resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 bg-linear-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-stone-950 font-bold rounded-xl text-sm transition-all flex items-center justify-center gap-2 shadow-xl shadow-amber-950/50 hover:shadow-amber-900/40 active:scale-[0.99] disabled:opacity-50"
+                className="w-full py-3.5 sm:py-4 bg-linear-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-stone-950 font-bold rounded-xl text-sm transition-all flex items-center justify-center gap-2 shadow-xl shadow-amber-950/50 hover:shadow-amber-900/40 active:scale-[0.99] disabled:opacity-50 cursor-pointer min-h-[44px]"
               >
                 {isSubmitting ? (
                   <span className="inline-block animate-pulse">Transmitting Dispatch...</span>
                 ) : (
                   <>
-                    <Send className="w-4 h-4" /> Transmit Inquiry to Archival Team
+                    <Send className="w-4 h-4" /> Transmit Inquiry to Archival Desk
                   </>
                 )}
               </button>

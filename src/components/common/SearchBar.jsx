@@ -159,7 +159,7 @@ export default function SearchBar({
           autoFocus={autoFocus}
           placeholder={placeholder}
           aria-label="Search traditional masks across the archive"
-          className="w-full py-2 px-1.5 bg-transparent text-stone-100 placeholder-stone-400 text-xs sm:text-sm outline-none font-medium selection:bg-amber-600 selection:text-white"
+          className="w-full py-2 px-1.5 bg-transparent text-stone-100 placeholder-stone-400 text-base sm:text-sm outline-hidden font-medium selection:bg-amber-600 selection:text-white"
         />
 
         {/* Clear Button (×) */}
@@ -170,7 +170,7 @@ export default function SearchBar({
               onClick={handleClear}
               title="Clear search (Esc)"
               aria-label="Clear search"
-              className="p-1 text-stone-400 hover:text-amber-300 hover:bg-stone-800/80 rounded-full transition-all duration-150 focus:outline-none"
+              className="p-1 text-stone-400 hover:text-amber-300 hover:bg-stone-800/80 rounded-full transition-all duration-150 focus:outline-hidden cursor-pointer"
             >
               <X className="w-3.5 h-3.5" />
             </button>
@@ -180,7 +180,7 @@ export default function SearchBar({
 
       {/* Live Search Results Dropdown Overlay */}
       {isOpen && isQueryActive && (
-        <div className="absolute left-0 right-0 top-full mt-2.5 bg-[#120f0d]/95 backdrop-blur-xl border border-amber-600/30 rounded-2xl shadow-2xl shadow-black/80 overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-200 divide-y divide-stone-800/70 max-w-xl mx-auto w-[90vw] sm:w-full">
+        <div className="absolute left-0 right-0 top-full mt-2 bg-[#120f0d]/95 backdrop-blur-xl border border-amber-600/30 rounded-2xl shadow-2xl shadow-black/80 overflow-hidden z-50 animate-in fade-in zoom-in-95 duration-200 divide-y divide-stone-800/70 max-w-full w-full">
           {/* Header info */}
           <div className="px-4 py-2.5 bg-stone-950/70 flex items-center justify-between text-[11px] text-stone-400">
             <div className="flex items-center gap-1.5 font-medium">
